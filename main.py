@@ -1,16 +1,91 @@
-# This is a sample Python script.
+#
+print("Задание 1 ")
+password = "Hello"
+password2 = input("Введите пароль: ")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+if password == password2:
+    print("Пароль совпадает")
+elif  password != password2:
+    print("Пароль не верный, попробуйте ещё раз!")
+
+print("Задание 2 ")
+a = 5
+b = 7
+a,b = b,a
+print(a,b)
+
+print("Задание 3")
+
+year = int(input("Введите год: "))
+if ((year % 4 == 0) or
+    (year % 100 != 0) and
+    (year % 400 == 0)):
+   print("Это высокосный год")
+else:
+   print("Это не высокосный год")
 
 
-#def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    #print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
-#if __name__ == '__main__':
-    #print_hi('PyCharm')
+# print("Задание 4")
+# print('''
+#  ********
+#  **    **
+#  **    **
+#  ********  ******    ******     *****         ****          ****      ******
+#       ***  **   **  **    **   **     *      **  **        **  **     **   **
+#      ** *  ******   **    **  **            **    **      **    **    *****
+#     **  *  **       **    **   **     *    **      **    **********   **   **
+#    **   *  **        ******     ******    **        **  **        **  ******
+#
+#  ''')
+print("Задание 4")
+options = {
+    'A': [' *** ', '*   *', '*****', '*   *', '*   *'],
+    'B': ['**** ', '*   *', '**** ', '*   *', '**** '],
+    'C': [' ****', '*    ', '*    ', '*    ', ' ****'],
+    'D': ['**** ', '*   *', '*   *', '*   *', '**** '],
+    'E': ['*****', '*    ', '*****', '*    ', '*****'],
+    'F': ['*****', '*    ', '***  ', '*    ', '*    '],
+    'G': [' ****', '*    ', '*  **', '*   *', ' ****'],
+    'H': ['*   *', '*   *', '*****', '*   *', '*   *'],
+    'I': ['*****', '  *  ', '  *  ', '  *  ', '*****'],
+    'J': ['*****', '    *', '    *', '*   *', ' *** '],
+    'K': ['*   *', '*  * ', '**   ', '*  * ', '*   *'],
+    'L': ['*    ', '*    ', '*    ', '*    ', '*****'],
+    'M': ['*   *', '** **', '* * *', '*   *', '*   *'],
+    'N': ['*   *', '**  *', '* * *', '*  **', '*   *'],
+    'O': [' *** ', '*   *', '*   *', '*   *', ' *** '],
+    'P': ['**** ', '*   *', '**** ', '*    ', '*    '],
+    'Q': [' *** ', '*   *', '*   *', '*  **', ' ** *'],
+    'R': ['**** ', '*   *', '**** ', '*  * ', '*   *'],
+    'S': [' ****', '*    ', '**** ', '    *', '**** '],
+    'T': ['*****', '  *  ', '  *  ', '  *  ', '  *  '],
+    'U': ['*   *', '*   *', '*   *', '*   *', ' *** '],
+    'V': ['*   *', '*   *', '*   *', ' * * ', '  *  '],
+    'W': ['*   *', '*   *', '* * *', '** **', '*   *'],
+    'X': ['*   *', ' * * ', '  *  ', ' * * ', '*   *'],
+    'Y': ['*   *', ' * * ', '  *  ', '  *  ', '  *  '],
+    'Z': ['*****', '   * ', '  *  ', ' *   ', '*****'],
+}
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+name = input("Введите ваше имя: ")
+newList = str(name)
+
+#len(newList.split())
+
+for i in range(5):
+    for j, _ in enumerate(newList):
+        print(options[newList[j].upper()][i] + "\t", end=" ")
+    print(end="\n")
+
+
+
+
+
+
+
+
+
+
+
